@@ -1,0 +1,6 @@
+services:
+  - type: web                      # Specifies this is a web service
+    name: smart-parking-fee        # Name of your app on Render
+    env: python                    # Sets the environment to Python
+    buildCommand: ""               # No build command required for Python FastAPI
+    startCommand: uvicorn app:app --host 0.0.0.0 --port 10000  # Command to start the app

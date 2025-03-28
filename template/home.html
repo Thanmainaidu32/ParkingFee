@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking Fee - Home</title>
+</head>
+<body>
+    <h1>Welcome to Smart Parking Fee System</h1>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <h2>Enter Vehicle</h2>
+    <form action="/enter" method="post">
+        <label for="vehicle_number">Vehicle Number:</label>
+        <input type="text" name="vehicle_number" required>
+        <button type="submit">Enter</button>
+    </form>
+
+    <h2>Exit Vehicle</h2>
+    <form action="/exit" method="post">
+        <label for="vehicle_number">Vehicle Number:</label>
+        <input type="text" name="vehicle_number" required>
+        <button type="submit">Exit</button>
+    </form>
+</body>
+</html>
